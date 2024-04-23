@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 85">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #f1d229;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_2-2" data-name="レイヤー 2">
+    <g>
+      <path class="cls-1" d="M84,85H24V0h60v85ZM28,81h52V4H28v77Z"/>
+      <g>
+        <rect class="cls-1" x="34.6" y="12" width="6.4" height="4"/>
+        <rect class="cls-1" x="45.5" y="12" width="6.5" height="4"/>
+        <rect class="cls-1" x="56.3" y="12" width="5.7" height="4"/>
+        <rect class="cls-1" x="67.2" y="12" width="6.8" height="4"/>
+      </g>
+      <g>
+        <rect class="cls-1" x="34.6" y="26" width="6.4" height="4"/>
+        <rect class="cls-1" x="45.5" y="26" width="6.5" height="4"/>
+        <rect class="cls-1" x="56.3" y="26" width="5.7" height="4"/>
+        <rect class="cls-1" x="67.2" y="26" width="6.8" height="4"/>
+      </g>
+      <g>
+        <rect class="cls-1" x="34.6" y="40" width="6.4" height="4"/>
+        <rect class="cls-1" x="45.5" y="40" width="6.5" height="4"/>
+        <rect class="cls-1" x="56.3" y="40" width="5.7" height="4"/>
+        <rect class="cls-1" x="67.2" y="40" width="6.8" height="4"/>
+      </g>
+      <g>
+        <rect class="cls-1" x="34.6" y="54" width="6.4" height="4"/>
+        <rect class="cls-1" x="45.5" y="54" width="6.5" height="4"/>
+        <rect class="cls-1" x="56.3" y="54" width="5.7" height="4"/>
+        <rect class="cls-1" x="67.2" y="54" width="6.8" height="4"/>
+      </g>
+      <g>
+        <rect class="cls-2" x="2" y="28" width="24" height="55"/>
+        <path class="cls-1" d="M28,85H0V26h28v59ZM4,81h20V30H4v51Z"/>
+      </g>
+      <rect class="cls-1" x="9" y="36" width="11" height="4"/>
+      <rect class="cls-1" x="9" y="46" width="11" height="4"/>
+      <rect class="cls-1" x="9" y="56" width="11" height="4"/>
+      <rect class="cls-1" x="9" y="66" width="11" height="4"/>
+    </g>
+  </g>
+</svg>

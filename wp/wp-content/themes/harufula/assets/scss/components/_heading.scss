@@ -1,0 +1,173 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+@use "../global" as g;
+
+//タイトル
+#{g.$prefix_mod}{
+  &Heading{
+    &02{
+      position: relative;
+      @include g.media_queries(pc){
+        margin: 0 0 30px;
+        padding: 0 0 0 20px;
+        @include g.fontsize(40);
+      }
+      @include g.media_queries{
+        margin: 0 0 20px;
+        padding: 0 0 0 10px;
+        @include g.fontsize(30);
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        background: var(--black);
+        width: 10px;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        @include g.media_queries{
+          width: 6px;
+        }
+      }
+    }
+    &03{
+      @include g.fontsize(24);
+      font-weight: 700;
+      @include g.media_queries(pc){
+        margin: 0 0 20px;
+        letter-spacing: -0.001em;
+      }
+      @include g.media_queries{
+        margin: 0 0 10px;
+        @include g.fontsize(20);
+      }
+    }
+    &Deco {
+      &Sq {
+        font-weight: bold;
+        position: relative;
+        @include g.media_queries(pc){
+          @include g.fontsize(30);
+          padding: 0 0 0 24px;
+          &--pl-240{
+            padding:0 0 0 240px;
+          }
+        }
+        @include g.media_queries{
+          @include g.fontsize(24);
+          padding: 0 0 0 24px;
+          margin: 20px 0 20px 0;
+        }
+
+        
+
+        @include g.media_queries{
+          @include g.fontsize(19);
+          padding: 0 0 0 16px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          aspect-ratio: 16/30;
+          display: inline-block;
+          background-image: url('#{g.$dir_img}common/icon/sq.png');
+          background-size: cover;
+          @include g.media_queries(pc){
+            width: 16px;
+          }
+          @include g.media_queries{
+            width: 8px;
+          }
+        }
+
+        &--mt100{
+          @include g.media_queries(pc){
+            margin:100px 0 20px 0;
+          }
+        }
+      }
+      &Tag {
+        font-weight: bold;
+        position: relative;
+        @include g.media_queries(pc){
+          @include g.fontsize(20);
+          padding: 0 0 0 24px;
+        }
+        @include g.media_queries{
+          @include g.fontsize(16);
+          padding: 0 0 0 24px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 20px;
+          aspect-ratio: 20/20;
+          display: inline-block;
+          background-image: url('#{g.$dir_img}common/icon/tag.svg');
+          background-size: cover;
+        }
+      }
+      
+    }
+
+    &TitleTag{
+      position: relative;
+      text-align: center;
+      font-weight: 700;
+      @include g.media_queries(pc){
+        margin: 0 auto 30px auto;
+        @include g.fontsize(40);
+      }
+      @include g.media_queries{
+        margin: 0 0 20px;
+        padding: 0 0 0 10px;
+        @include g.fontsize(30);
+      }
+      &::before {
+        content: '';
+        position: relative;
+        aspect-ratio: 1;
+        margin: 0px 20px 0 0;
+        display: inline-block;
+        background-image: url('#{g.$dir_img}common/icon/heading/img_tag_news.png');
+        background-size: cover;
+        background-position: center;
+        @include g.media_queries(pc){
+          width: 50px;
+        }
+        @include g.media_queries{
+          width: 50px;
+        }
+      }
+    }
+
+    &01{
+      font-weight: 700;
+      @include g.media_queries(pc){
+        @include g.fontsize(46);
+        margin:30px 0 30px 0;
+      }
+      @include g.media_queries{
+        @include g.fontsize(34);
+        margin:15px 0 15px 0;
+      }
+    }
+  }
+}
+
+
+
+.newsHeading{
+  &--pickup{
+    @include g.media_queries(pc){
+      margin: 55px 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,222 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+@use "../global" as g;
+
+#{g.$prefix_mod}{
+  &List {
+    //タグ
+    &Tags {
+      @include g.media_queries(pc){
+        margin-top: 90px;
+        border-top: 1px solid var(--black);
+        border-bottom: 1px solid var(--black);
+        padding: 30px 30px 40px;
+      }
+      @include g.media_queries{
+        margin-top: 95px;
+      }
+      .list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 8px;
+        @include g.media_queries(pc){
+          margin: 6px 0 0 0;
+        }
+        @include g.media_queries{
+          margin: 22px 0 0 0;
+        }
+        &__item{
+          border: 1px solid var(--black);
+          padding: 0 6px;
+          border-radius: 4px;
+          box-shadow: 2px 2px 0px 0px #e0e0e0;
+        }
+      }
+      
+      &--header{
+        margin-top: 0px;
+        border-top: none;
+        border-bottom: none;
+      }
+
+      &--news{
+        @include g.media_queries(pc){
+          margin-top: 30px;
+          border-top: 0px;
+          border-bottom: 0px;
+          padding: 0;
+        }
+        @include g.media_queries{
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+}
+
+.pagination{
+  width: 100%;
+  margin: 40px 0 120px 0;
+  &__inner{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .active{
+      background-color: #eddb3a;
+      border-radius: 50%;
+    }
+    li{
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        
+        &:hover{
+          background-color: #f1de39;
+        }
+      }
+    }
+
+    &:first-child{
+      &::before{
+        content: "";
+        cursor: pointer;
+        background-image: url("#{g.$dir_img}/news/img_prev.png");
+        position: relative;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        z-index: 2;
+        margin: 0 30px 0 30px;
+
+        @include g.media_queries{
+          margin: 0 10px 0 10px;
+        }
+      }
+    }
+
+    &:last-child{
+      &::after{
+        content: "";
+        cursor: pointer;
+        background-image: url("#{g.$dir_img}/news/img_prev.png");
+        position: relative;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        z-index: 2;
+        transform: rotate(180deg);
+        margin: 0 30px 0 30px;
+        @include g.media_queries{
+          margin: 0 10px 0 10px;
+        }
+      }
+    }
+  }
+}
+
+.linkList{
+  width: 100%;
+
+  @include g.media_queries{
+    margin: 40px 0 40px 0;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ul{
+      display: flex;
+      flex-direction: row;
+      gap:30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      
+
+      li{
+        text-align: center;
+        @include g.media_queries{
+          width: calc((100% - 30px) / 2);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        
+        .disabled{
+          background-color: #f4f4f4;
+          border-radius: 50%;
+          border: none;
+
+          cursor: not-allowed;
+          
+        }
+        a{
+          border-radius: 50%;
+          border: 1px solid black;
+          width: 130px;
+          height: 130px;
+          padding: 40px;
+          position: relative;
+          align-items: center;
+          gap: 10px;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+
+          @include g.media_queries{
+            width: 100px;
+            height: 100px;
+          }
+
+          .img{
+            width: 40px;
+            height: 40px;
+
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          p{
+            font-weight: 700;
+            text-wrap: nowrap;
+            letter-spacing: 0.01em;
+
+            @include g.media_queries{
+              font-size: 12px;
+            }
+          }
+
+          &:hover{
+            background-color: #f4f4f4;
+          }
+        }
+
+        .linkList__itemList__note{
+          font-size: 12px;
+          color: #9c9c9c;
+        }
+
+      }
+    }
+  }
+}

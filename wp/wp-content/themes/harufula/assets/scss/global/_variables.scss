@@ -1,0 +1,45 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+// 使用変数
+//===================================================================
+
+// 画像ディレクトリ
+$dir_img: "/wp/wp-content/themes/harufula/assets/img/";
+
+// ブレークポイント
+$bp_pc_min: 769px;
+$bp_tablet_max: 1000px;
+$bp_tablet_min: 1001px;
+$bp_smartphone_max: 768px;
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+$fontface_default: 'Noto Sans JP', sans-serif;
+
+
+// テキストカラー
+$base_text_color: var(--black);
+$strong_text_color: #ED6E20;
+
+
+//コンテンツ幅
+$base_content_width: 1260;
+
+
+//class名の接頭辞
+$prefix_mod: ".mod";
+
+
+//カラー
+:root{
+  --white: #fff;
+  --black: #000;
+  --gray: #ccc;
+  --lightgray: #ebebeb;
+  --orange: #ED6E20;
+
+  --yellow: #f1d229;
+  --blue: #1e468c;
+  --green: #198745;
+}

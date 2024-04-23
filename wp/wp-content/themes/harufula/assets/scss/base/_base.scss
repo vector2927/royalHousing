@@ -1,0 +1,68 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+@use "../global" as g;
+
+*{
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+  height: auto;
+}
+body{
+  font-family: g.$fontface_default;
+  line-height: 1.8;
+  letter-spacing: 0px;
+  color: var(--black);
+  word-break: break-all;
+  @include g.fontsize(14);
+  overflow-x: hidden;
+  &.scrollLock{
+    overflow: hidden;
+  }
+}
+a{
+  color: var(--black);
+  @include g.media_queries(pc){
+    transition: all 0.3s ease-out;
+  }
+}
+.main{
+  padding-top: 180px;
+  &__inner{
+    @include g.media_queries(pc){
+      padding: 0 70px;
+    }
+    @include g.media_queries{
+      padding: 0 20px;
+    }
+  }
+}
+.pageWrapper{
+  overflow: hidden;
+  @include g.media_queries{
+    padding: 110px 0 0;
+  }
+}
+
+@font-face {
+  font-family: "Barlow bold";
+  src: url(/wp/wp-content/themes/harufula/assets/fonts/Barlow-Bold.ttf);
+}
+
+.mod{
+  &Pc{
+    display: flex;
+    @include g.media_queries{
+      display: none;
+    }
+  }
+
+  &Sp{
+    display: none;
+    @include g.media_queries{
+      display: flex;
+    }
+  }
+}
